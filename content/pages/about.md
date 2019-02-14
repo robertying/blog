@@ -3,10 +3,49 @@ title: "About me"
 template: "page"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+My name is **应睿 (Ying Rui)**. I like to be called **Robert** as well. I'm currently an undergraduate student of Electronic Engineering at [Tsinghua University](http://www.tsinghua.edu.cn/publish/thu2018en/index.html). Though my major is Electronic Engineering, I'm _always_ enthusiastic about computer stuff and keen on software engineering, especially front-end development.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+## Interests
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+My _biggest_ interest: computers 💻 !
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+- Software development! Websites, apps, helper scripts...
+- Use software! I like resetting Windows installations. 🙃
+- Game hardware! I have my dear baby DIY PC.
+
+Second best loved: Games 🎮 !
+
+- Hmm... I don't play on consoles.
+- World of Warcraft, Overwatch... Yes Blizzard ❄️ !
+- Assassins' Creed Odyssey.
+
+Also, Netflix, movies 🍿 and music 🎧 !
+
+- Sci-fi, fantasy...
+- _**`Lady Gaga`**_ !!!
+
+## Life
+
+### Before college
+
+I was born in a seaside city in Zhejiang Province, China. Its name is [Ningbo](https://en.wikipedia.org/wiki/Ningbo) which literally means _making peace with the sea_. So yes, there are large ports in my hometown as well as delicious seafood.
+
+![Ningbo](../../static/ningbo.jpg)
+
+I spent 18 years here and finished my primary and high schools.
+
+### College
+
+Quite luckily, I was admitted into the best university in China and was able to have three nice roommates along the college journey.
+
+![Tsinghua University](../../static/tsinghua-university.jpg)
+
+Though life is not what I expected, I've always tried to _live something good_ out of it. I decided to pursue my interest in **Computer Science** instead of Electronic Engineering. I hope I can get what I want soon. 😎
+
+I'm also excited about my exchange experience in [University of Utah](https://en.wikipedia.org/wiki/University_of_Utah). Salt Lake City is _quite a place_ to enjoy the life. But I was in too much a hurry and didn't have a chance to go skiing there. What a shame!
+
+![University of Utah](../../static/university-of-utah.jpg)
+
+### After college
+
+> _To be written..._
