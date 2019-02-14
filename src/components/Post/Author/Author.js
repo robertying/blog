@@ -12,11 +12,11 @@ export const PureAuthor = ({ data }) => {
         {author.bio}
         <a
           className={styles['author__bio-twitter']}
-          href={getContactHref('twitter', author.contacts.twitter)}
+          href={getContactHref('github', author.contacts.github)}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <strong>{author.name}</strong> on Twitter
+          <strong>{author.name}</strong> on GitHub
         </a>
       </p>
     </div>
@@ -32,8 +32,8 @@ export const Author = (props) => (
             author {
               name
               bio
-              contacts {       
-                twitter
+              contacts {
+                github
               }
             }
           }

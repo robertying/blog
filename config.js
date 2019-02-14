@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+  url: 'https://www.robertying.io',
+  title: 'Blog by Robert Ying (应睿)',
+  subtitle: 'code / life / thoughts',
+  copyright: '© 2019 Robert Ying',
   disqusShortname: '',
-  postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  postsPerPage: 3,
+  googleAnalyticsId: 'UA-90411129-2',
   menu: [
     {
       label: 'Articles',
@@ -16,23 +16,16 @@ module.exports = {
     {
       label: 'About me',
       path: '/pages/about'
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Robert Ying (应睿)',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Undergraduate at Tsinghua University. Love computer stuff 💻',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'yingrui205@gmail.com',
+      twitter: 'robert_ying',
+      github: 'robertying'
     }
   }
 };
