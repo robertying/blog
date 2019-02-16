@@ -30,7 +30,7 @@ Also, Netflix, movies 🍿 and music 🎧 !
 
 I was born in a seaside city in Zhejiang Province, China. Its name is [Ningbo](https://en.wikipedia.org/wiki/Ningbo) which literally means _making peace with the sea_. So yes, there are large ports in my hometown as well as delicious seafood.
 
-![Ningbo](../../static/ningbo.jpg)
+![Ningbo](../../static/media/ningbo.jpg)
 
 I spent 18 years here and finished my primary and high schools.
 
@@ -38,13 +38,13 @@ I spent 18 years here and finished my primary and high schools.
 
 Quite luckily, I was admitted into the best university in China and was able to have three nice roommates along the college journey.
 
-![Tsinghua University](../../static/tsinghua-university.jpg)
+![Tsinghua University](../../static/media/tsinghua-university.jpg)
 
 Though life is not what I expected, I've always tried to _live something good_ out of it. I decided to pursue my interest in **Computer Science** instead of Electronic Engineering. I hope I can get what I want soon. 😎
 
 I'm also excited about my exchange experience in [University of Utah](https://en.wikipedia.org/wiki/University_of_Utah). Salt Lake City is _quite a place_ to enjoy the life. But I was in too much a hurry and didn't have a chance to go skiing there. What a shame!
 
-![University of Utah](../../static/university-of-utah.jpg)
+![University of Utah](../../static/media/university-of-utah.jpg)
 
 ### After college
 
