@@ -6,11 +6,12 @@ draft: false
 slug: "/posts/four-months-in-the-US-part-one/"
 category: "Life"
 tags:
+  - "Four Months in the U.S."
   - "Salt Lake City"
   - "Live"
-  - "Study"
-  - "Food"
-description: "I decided to go on an exchange program in the U.S. last year for a change of mind. Four months in Salt Lake City, a beautiful and quiet place in the state of Utah has really given me something new to feel and think about. Studying in a different education system can be challenging and exciting."
+  - "Buy"
+  - "Eat"
+description: "I decided to go on an exchange program in the U.S. last year for a change of mind. Four months in Salt Lake City, a beautiful and quiet place in the state of Utah has really given me something new to feel and think about. Life is completely different and there is much to explore."
 ---
 
 At the beginning of 2018, my thoughts of going abroad thrived after we were given opportunities to take part in exchange programs from all over the world. I believe I've always wanted to visit the U.S., whether because of its advancing technologies or its diversity in people. I was only able to choose the University of Utah so that I could finally end up in America. It turned out _to be not so bad_, after all. Besides, I really would like **a change of mind** and some air far away from the heavy school work of my home university. So I decided to go.
@@ -56,3 +57,33 @@ We also had RAs (Residence Assistant or Administrator?) to help out around and o
 ![house summer](../../static/media/house-summer.jpg)
 
 ![house winter](../../static/media/house-winter.jpg)
+
+### Buy
+
+The biggest difference for a foreigner in the U.S. to sense would probably be the prices. A bottled coke is generally \$1.75, which is almost 12.25 yuan and **3.5 times** of its price in China (3.5 yuan). So If you do not earn dollars yourself, daily goods can be too much to afford. However, those goods manufactured from modern and industrialized assembly lines are fairly cheap in America itself if not compared abroad.
+
+Another significant point worth noticing is that almost every item you see in the supermarket is _large or multi-packed_ that are so-called **family packs**. So indeed as people would say, cheaper stuff is much more tailered for big families, which you can barely see in China nowadays.
+
+I got the Amazon Prime Student membership for free and thus had been using the benefits a lot. Prime members have access to two-day shippings which is almost standard in China (_you do not need any membership to enjoy the priviledge_). The service, however, was way better. I cannot count the times when I asked Amazon to get me a refund or cancellation, and they just did it, fast, responsive and willingly. I also tried Amazon's new Prime Now from the Whole Food they bought. It provides same-day shippings with a high bar of prices to get it for free, though. Goods from Whole Food were good but expensive, not something normal families can afford, I guess.
+
+The last but not foremost thing is **Black Friday**! I did not go out to join the crowds, but I did spend a lot money online. Discounts were huge. Amazon processed refund or return requests efficiently during the Christmas season. On the contrary, you always need to wait until the shopping season to end in order to get these issues taken care of in China.
+
+### Eat
+
+I would say the United States is _the desert of food_. You cannot really enjoy the food unless going to someplace expensive. This may sound arbitrary but it is what I felt. Burgers, pasta, pizza, sweets and ice cream. They are common American things to eat.
+
+At first, I was excited to eat at the buffet place near the dorms. They have everthing listed above.
+
+![American breakfast](../../static/media/american-breakfast.jpg)
+
+But I really had nothing else to choose and became bored. So if you are someone from outside the States, you'd better cook _yourself_. 😒
+
+Apart from dining near the dorms, we could also choose to go to some fast food restaurant at school. I still remembered the first time I have ever bought a bagle. I was completely confused when they asked which kind of bagle (the bread) to choose, since I _cannot understand a word_ about bagles. It tasted good, but the price was too much to match the taste.
+
+One restaurant I like best, though, is Panda Express! Many would say it's not _real_ Chinese cuisines. It's true. Something like **Orange Chicken** made me want to vomit immediately because it smelled so sour. I like **Kung Pao Chicken**! It's spicy and juicy!
+
+The general price for a **bowl** of Panda Express is around $9 in Utah. Kind of expensive for me. But I later found out you also need to spend around $9 for one McDonald's meal. I guess eating out would not be a viable option if you want to save money.
+
+Speaking of McDonald's, I have to mention Starbucks as well. One interesting aspect about Starbucks is the price of a coffee is _almost the same_ between China and the States. **\$6 and 40 yuan**. In comparison, one McDonald's meal is _less than_ `$9 * 7 = 63 yuan` in China. You can see how Starbucks earns money in China, without any _price localizing_.
+
+![pumpkin cake](../../static/media/pumpkin-cake.jpg)
