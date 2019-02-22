@@ -3,7 +3,31 @@
 exports[`Copyright renders correctly 1`] = `
 <div
   className="copyright"
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
 >
-  copyright
+  <div
+    style={
+      Object {
+        "marginRight": 10,
+      }
+    }
+  >
+    copyright
+  </div>
+  <a
+    href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    rel="license"
+  >
+    <img
+      alt="Creative Commons License"
+      src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
+    />
+  </a>
 </div>
 `;
