@@ -32,6 +32,12 @@ I didn't know much about SLC except that it held 2002 Winter Olympics. I did do 
 
 First impression: **clean and empty**! There are fewer cars and people. The city center is not big, making you hard to believe it's the state capital. You only get buses and trains (they are called Trax there) for public transportation. It's not so convenient as in China but Americans all have cars which makes public transportations less important in a wild west city.
 
+![trax station](../../static/media/trax-station.jpg)
+
+![SLC view 1](../../static/media/slc-view-1.jpg)
+
+![SLC view 2](../../static/media/slc-view-2.jpg)
+
 University of Utah campus shares the same quality with the city. It's on the east side of the city and 30 minute ride far from it.
 
 ![campus bridge](../../static/media/campus-bridge.jpg)
@@ -70,6 +76,8 @@ The last but not foremost thing is **Black Friday**! I did not go out to join th
 
 ### Eat
 
+![pizza](../../static/media/pizza.jpg)
+
 I would say the United States is _the desert of food_. You cannot really enjoy the food unless going to someplace expensive. This may sound arbitrary but it is what I felt. Burgers, pasta, pizza, sweets and ice cream. They are common American things to eat.
 
 At first, I was excited to eat at the buffet place near the dorms. They have everthing listed above.
@@ -79,6 +87,8 @@ At first, I was excited to eat at the buffet place near the dorms. They have eve
 But I really had nothing else to choose and became bored. So if you are someone from outside the States, you'd better cook _yourself_. 😒
 
 Apart from dining near the dorms, we could also choose to go to some fast food restaurant at school. I still remembered the first time I have ever bought a bagle. I was completely confused when they asked which kind of bagle (the bread) to choose, since I _cannot understand a word_ about bagles. It tasted good, but the price was too much to match the taste.
+
+![orange chicken](../../static/media/orange-chicken.jpg)
 
 One restaurant I like best, though, is Panda Express! Many would say it's not _real_ Chinese cuisines. It's true. Something like **Orange Chicken** made me want to vomit immediately because it smelled so sour. I like **Kung Pao Chicken**! It's spicy and juicy!
 
