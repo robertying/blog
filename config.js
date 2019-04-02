@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://www.robertying.io',
   title: 'Blog by Robert Ying (应睿)',
-  subtitle: 'code / life / thoughts',
+  subtitle: 'Code / Life / Thoughts',
   copyright: '© 2019 Robert Ying',
   disqusShortname: '',
   postsPerPage: 3,
