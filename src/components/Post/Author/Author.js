@@ -1,18 +1,18 @@
-import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import { getContactHref } from '../../../utils';
-import styles from './Author.module.scss';
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import { getContactHref } from "../../../utils";
+import styles from "./Author.module.scss";
 
 export const PureAuthor = ({ data }) => {
   const { author } = data.site.siteMetadata;
 
   return (
-    <div className={styles['author']}>
-      <p className={styles['author__bio']}>
+    <div className={styles["author"]}>
+      <p className={styles["author__bio"]}>
         {author.bio}
         <a
-          className={styles['author__bio-twitter']}
-          href={getContactHref('github', author.contacts.github)}
+          className={styles["author__bio-twitter"]}
+          href={getContactHref("github", author.contacts.github)}
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -23,7 +23,7 @@ export const PureAuthor = ({ data }) => {
   );
 };
 
-export const Author = (props) => (
+export const Author = props => (
   <StaticQuery
     query={graphql`
       query AuthorQuery {
@@ -40,7 +40,7 @@ export const Author = (props) => (
         }
       }
     `}
-    render={(data) => <PureAuthor {...props} data={data} />}
+    render={data => <PureAuthor {...props} data={data} />}
   />
 );
 

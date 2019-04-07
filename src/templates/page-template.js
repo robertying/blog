@@ -1,14 +1,11 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Sidebar from '../components/Sidebar';
-import Page from '../components/Page';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Sidebar from "../components/Sidebar";
+import Page from "../components/Page";
 
 const PageTemplate = ({ data }) => {
-  const {
-    title: siteTitle,
-    subtitle: siteSubtitle
-  } = data.site.siteMetadata;
+  const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
 
   const {
     title: pageTitle,
@@ -17,7 +14,8 @@ const PageTemplate = ({ data }) => {
 
   const { html: pageBody } = data.markdownRemark;
 
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+  const metaDescription =
+    pageDescription !== null ? pageDescription : siteSubtitle;
 
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>

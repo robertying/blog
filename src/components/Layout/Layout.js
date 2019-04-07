@@ -1,6 +1,6 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import styles from './Layout.module.scss';
+import React from "react";
+import Helmet from "react-helmet";
+import styles from "./Layout.module.scss";
 
 const Layout = ({ children, title, description }) => (
   <div className={styles.layout}>

@@ -1,14 +1,11 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Sidebar from '../components/Sidebar';
-import Layout from '../components/Layout';
-import Page from '../components/Page';
+import React from "react";
+import { graphql } from "gatsby";
+import Sidebar from "../components/Sidebar";
+import Layout from "../components/Layout";
+import Page from "../components/Page";
 
 const NotFoundTemplate = ({ data }) => {
-  const {
-    title,
-    subtitle
-  } = data.site.siteMetadata;
+  const { title, subtitle } = data.site.siteMetadata;
 
   return (
     <Layout title={`Not Found - ${title}`} description={subtitle}>

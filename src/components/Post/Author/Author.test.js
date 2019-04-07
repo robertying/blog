@@ -1,18 +1,18 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { PureAuthor as Author } from './Author';
+import React from "react";
+import renderer from "react-test-renderer";
+import { PureAuthor as Author } from "./Author";
 
-describe('Author', () => {
-  it('renders correctly', () => {
+describe("Author", () => {
+  it("renders correctly", () => {
     const props = {
       data: {
         site: {
           siteMetadata: {
             author: {
-              name: 'test',
-              bio: 'test',
+              name: "test",
+              bio: "test",
               contacts: {
-                twitter: 'test'
+                twitter: "test"
               }
             }
           }

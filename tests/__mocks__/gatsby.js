@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-const gatsby = jest.requireActual('gatsby');
+const gatsby = jest.requireActual("gatsby");
 
 module.exports = {
   ...gatsby,
   graphql: jest.fn(),
-  Link: 'Link',
-  StaticQuery: 'StaticQuery'
+  Link: "Link",
+  StaticQuery: "StaticQuery"
 };

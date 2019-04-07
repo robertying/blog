@@ -1,21 +1,17 @@
-import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import Author from './Author';
-import Contacts from './Contacts';
-import Copyright from './Copyright';
-import Menu from './Menu';
-import styles from './Sidebar.module.scss';
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Author from "./Author";
+import Contacts from "./Contacts";
+import Copyright from "./Copyright";
+import Menu from "./Menu";
+import styles from "./Sidebar.module.scss";
 
 export const PureSidebar = ({ data, isIndex }) => {
-  const {
-    author,
-    copyright,
-    menu
-  } = data.site.siteMetadata;
+  const { author, copyright, menu } = data.site.siteMetadata;
 
   return (
-    <div className={styles['sidebar']}>
-      <div className={styles['sidebar__inner']}>
+    <div className={styles["sidebar"]}>
+      <div className={styles["sidebar__inner"]}>
         <Author author={author} isIndex={isIndex} />
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
@@ -25,7 +21,7 @@ export const PureSidebar = ({ data, isIndex }) => {
   );
 };
 
-export const Sidebar = (props) => (
+export const Sidebar = props => (
   <StaticQuery
     query={graphql`
       query SidebarQuery {
@@ -42,7 +38,7 @@ export const Sidebar = (props) => (
               name
               photo
               bio
-              contacts {       
+              contacts {
                 twitter
                 github
                 email
@@ -52,7 +48,7 @@ export const Sidebar = (props) => (
         }
       }
     `}
-    render={(data) => <PureSidebar {...props} data={data}/>}
+    render={data => <PureSidebar {...props} data={data} />}
   />
 );
 

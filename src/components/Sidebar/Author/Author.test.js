@@ -1,17 +1,17 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Author from './Author';
+import React from "react";
+import renderer from "react-test-renderer";
+import Author from "./Author";
 
-describe('Author', () => {
+describe("Author", () => {
   const props = {
     author: {
-      name: 'test',
-      photo: '/photo.jpg',
-      bio: 'test'
+      name: "test",
+      photo: "/photo.jpg",
+      bio: "test"
     }
   };
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const tree = renderer.create(<Author {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

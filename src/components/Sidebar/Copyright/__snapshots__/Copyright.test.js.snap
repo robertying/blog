@@ -21,13 +21,11 @@ exports[`Copyright renders correctly 1`] = `
     copyright
   </div>
   <a
-    href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
     rel="license"
+    target="_blank"
   >
-    <img
-      alt="Creative Commons License"
-      src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-    />
+    CC BY-NC-SA 4.0
   </a>
 </div>
 `;
