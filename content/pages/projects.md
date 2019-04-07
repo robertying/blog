@@ -5,6 +5,14 @@ template: "page"
 
 Here are some projects I have been working on out of great interest or personal needs. All are independent work.
 
+## learnX ✨
+
+👉 [learnX](https://github.com/robertying/learnX)
+
+Hybrid app for Tsinghua University Web Learning, written with React Native 💖, making it much easier to browse your course notices, download files and review your homework.
+
+Keywords 🔑 React Native, TypeScript, Hybrid App
+
 ## SAST Weekly 📰
 
 Website 👉 [SAST Weekly](https://weekly.eesast.com/)
