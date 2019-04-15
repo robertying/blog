@@ -1,0 +1,13 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/src/flow/CSSModuleStub.js'
+server.max_workers=4
+
+[strict]
