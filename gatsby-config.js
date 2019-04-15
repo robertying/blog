@@ -5,7 +5,7 @@ const postCssPlugins = require("./postcss-config.js");
 
 module.exports = {
   siteMetadata: {
-    siteUrl: siteConfig.siteUrl,
+    url: siteConfig.url,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     copyright: siteConfig.copyright,
@@ -120,8 +120,13 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-netlify",
     {
-      resolve: "gatsby-plugin-google-analytics",
-      options: { trackingId: siteConfig.googleAnalyticsId }
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [siteConfig.googleAnalyticsId],
+        pluginConfig: {
+          head: true
+        }
+      }
     },
     {
       resolve: "gatsby-plugin-sitemap",
@@ -130,7 +135,7 @@ module.exports = {
           {
             site {
               siteMetadata {
-                siteUrl
+                url
               }
             }
             allSitePage(
@@ -178,6 +183,7 @@ module.exports = {
           camelCase: false
         }
       }
-    }
+    },
+    "gatsby-plugin-flow"
   ]
 };

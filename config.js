@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  siteUrl: "https://robertying.io",
+  url: "https://robertying.io",
   title: "Blog by Robert Ying (应睿)",
   subtitle: "Code / Life / Thoughts",
   copyright: "© 2019 Robert Ying",
