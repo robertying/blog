@@ -6,6 +6,7 @@ const postCssPlugins = require("./postcss-config.js");
 module.exports = {
   siteMetadata: {
     url: siteConfig.url,
+    siteUrl: siteConfig.url,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     copyright: siteConfig.copyright,
@@ -129,15 +130,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: [siteConfig.googleAnalyticsId],
-        pluginConfig: {
-          head: true
-        }
-      }
-    },
-    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
@@ -145,6 +137,7 @@ module.exports = {
             site {
               siteMetadata {
                 url
+                siteUrl
               }
             }
             allSitePage(
