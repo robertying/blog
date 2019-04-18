@@ -47,7 +47,7 @@ libtunet_la_LIBADD = ../lib/libportal.la $(CRYPTOLIB) $(CURLLIB)
 
 `$(CRYPTOLIB)` and `$(CURLLIB)` are defined by `configure.ac` where you check whether some necessary libs exist in your system. For a well set up build environment, they will be equal to `-lcrypto` (part of `openssl` lib) and `-lcurl` after running `./configure`.
 
-Yes, this is easy for almost every Unix-like system. However, Android do not have `openssl` and `curl` built in and we do not have an `apm (Android Package Manager)` to install them :p. We must build `openssl` and `curl` from source. I will talk about how to achieve this in the following post. Let's just assume we have already had three static libraries -- `libssl.a`, `libcrypto.a` (those two are `openssl` libs) and `libcurl.a` built for all Android targets (x86, arm, arm64, etc.).
+Yes, this is easy for almost every Unix-like system. However, Android do not have `openssl` and `curl` built in and we do not have an `apm (Android Package Manager)` to install them :p. We must build `openssl` and `curl` from source. I will talk about how to achieve this in [the following post](/posts/compile-openssl-and-curl-for-android). Let's just assume we have already had three static libraries -- `libssl.a`, `libcrypto.a` (those two are `openssl` libs) and `libcurl.a` built for all Android targets (x86, arm, arm64, etc.).
 
 Now we want to add them to our existing Android project so we can use `libtunet`.
 
@@ -79,7 +79,7 @@ The above three blocks are all the same.
 
 1. First, we do `include $(CLEAR_VARS)` which is necessary for `Android.mk`.
 2. Then, we name the library we are including into the Android project. Here for example, we have `curl` for `LOCAL_MODULE`, then later we can use `libcurl` to point to this static library.
-3. Since we are including a static library, `LOCAL_SRC_FILES` refers to the prebuilt `.a` file. I cross-compiled these libraries ahead of time and put them in the path shown above (next post will be on this topic).
+3. Since we are including a static library, `LOCAL_SRC_FILES` refers to the prebuilt `.a` file. I cross-compiled these libraries ahead of time and put them in the path shown above ([next post](/posts/compile-openssl-and-curl-for-android) will be on this topic).
 4. `LOCAL_EXPORT_CFLAGS` is usually for making the library's include files to be seen in the rest of the Makefile.
 5. `include $(PREBUILT_STATIC_LIBRARY)` says this block is about a prebuilt static library. We can also use _shared_ one. Visit [NDK docs](https://developer.android.com/ndk/guides/android_mk) for more information.
 6. Just to mention, `$(TARGET_ARCH_ABI)` is a helpful macro to be equal to the ABI you are building for. So I can always link the right architecture of the libraries.
