@@ -5372,10 +5372,10 @@ gatsby-plugin-feed@2.1.1:
     lodash.merge "^4.6.0"
     rss "^1.2.2"
 
-gatsby-plugin-flow@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-flow/-/gatsby-plugin-flow-1.0.4.tgz#13a93a734115fb595fc725c319c47a007841d94d"
-  integrity sha512-HUFDiZIBEU6ZM6gOytKdX0FtgpZyw3vycZwGdY4Y6rtins9iXrfNmnh0pMyb8jVmCWUlxSPu+LMt14sm1QVDOg==
+gatsby-plugin-flow@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-flow/-/gatsby-plugin-flow-1.0.5.tgz#1078160648cce0d91610fe37721fd78cae904705"
+  integrity sha512-LAyvG7+UJpiNyvDFXXVz2/HHHO3fe44d9HcUi0uh1s8rwkD9FfjlGN98rL26fOFtVl2GDtl9EfhCkmuM02PlyA==
   dependencies:
     "@babel/preset-flow" "^7.0.0-rc.1"
     "@babel/runtime" "^7.0.0"
@@ -5499,10 +5499,10 @@ gatsby-remark-autolink-headers@2.0.16:
     mdast-util-to-string "^1.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-copy-linked-files@2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.11.tgz#00ddb1af5e90a24ed4161a23aa578a9e9be4a2c5"
-  integrity sha512-gAca6KI/a3tXiuc1NxEwBXz9JKDsFer1DpTXePoZtXW9q6N2OSgsp+zW6jo7Qr7bimFjLSUnhEoAxBML61aJ8Q==
+gatsby-remark-copy-linked-files@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.12.tgz#0c6596194575489d875151932b60587fef645fd5"
+  integrity sha512-6Al7lTKm2VHmivHWAxY3Xi5bkfyqDVcjZhPM2WYe/BCzFcyrxYkaO1uSzGqamIS6Mf1gZagfZLedMoZuY9UMhA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
