@@ -68,7 +68,7 @@
     "eslint-config-prettier": "4.2.0",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-watch": "5.1.0",
-    "flow-bin": "0.97.0",
+    "flow-bin": "0.98.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.7.1",
     "lost": "8.3.1",
