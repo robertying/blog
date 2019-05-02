@@ -16,7 +16,7 @@
   "dependencies": {
     "bluebird": "3.5.4",
     "classnames": "2.2.6",
-    "gatsby": "2.3.35",
+    "gatsby": "2.3.36",
     "gatsby-link": "2.0.17",
     "gatsby-plugin-catch-links": "2.0.13",
     "gatsby-plugin-feed": "2.1.2",
@@ -33,7 +33,7 @@
     "gatsby-remark-copy-linked-files": "2.0.12",
     "gatsby-remark-images": "3.0.11",
     "gatsby-remark-katex": "3.0.4",
-    "gatsby-remark-prismjs": "3.2.8",
+    "gatsby-remark-prismjs": "3.2.9",
     "gatsby-remark-relative-images": "0.2.2",
     "gatsby-remark-responsive-iframe": "2.1.1",
     "gatsby-remark-smartypants": "2.0.9",
