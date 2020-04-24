@@ -93,7 +93,7 @@
     "prettier": "1.19.1",
     "react-test-renderer": "16.13.1",
     "rimraf": "3.0.2",
-    "stylelint": "13.3.2",
+    "stylelint": "13.3.3",
     "stylelint-config-recommended-scss": "4.2.0",
     "stylelint-scss": "3.17.0"
   }
