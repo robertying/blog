@@ -1,1 +1,9 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# robertying.io
+
+Blog by Rui Ying
+
+## License
+
+CC BY-NC-SA 4.0
+
+MIT

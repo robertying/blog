@@ -1,0 +1,35 @@
+.container {
+  max-width: 36rem;
+  padding: 0 1.5rem;
+  margin: 3rem auto 3rem;
+}
+
+.links > * {
+  margin: auto 0.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerImage {
+  width: 6rem;
+  height: 6rem;
+}
+
+.headerHomeImage {
+  width: 8rem;
+  height: 8rem;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+.footer {
+  text-align: center;
+  font-size: smaller;
+  margin: 3rem;
+}
