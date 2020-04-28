@@ -34,6 +34,7 @@ export default function Layout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="title" content={siteTitle} />
         <meta name="description" content="Personal blog by Rui Ying (应睿)" />
         <meta name="og:title" content={siteTitle} />

@@ -6,7 +6,7 @@ import { GA_TRACKING_ID } from "../lib/gtag";
 export default class extends Document {
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <script
             async
