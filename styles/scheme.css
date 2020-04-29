@@ -1,0 +1,74 @@
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: rgb(0, 122, 255);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #2d2d2d;
+    color: white;
+  }
+
+  a {
+    color: #87bcff;
+  }
+
+  .markdown-body blockquote {
+    color: #b0bbc7;
+  }
+
+  .markdown-body code {
+    background-color: rgba(27, 31, 35, 0.95);
+  }
+
+  .markdown-body .highlight pre,
+  .markdown-body pre {
+    background-color: rgba(27, 31, 35, 0.95);
+  }
+
+  .hljs {
+    color: #ccc;
+  }
+
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #01c5c5;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #ff8585;
+  }
+
+  .hljs-string,
+  .hljs-doctag {
+    color: #ff2e62;
+  }
+
+  .hljs-meta {
+    color: #bdbdbd;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #ff4242;
+  }
+
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #8da7f5;
+  }
+}

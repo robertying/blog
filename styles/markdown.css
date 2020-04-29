@@ -1,0 +1,9 @@
+code,
+pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+.markdown-body {
+  font-size: 18px;
+  line-height: 1.6;
+}

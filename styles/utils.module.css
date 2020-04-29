@@ -48,7 +48,19 @@
 }
 
 .lightText {
-  color: #666;
+  color: rgb(142, 142, 147);
+}
+
+@media (prefers-color-scheme: light) {
+  .lightText {
+    color: rgb(142, 142, 147);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .lightText {
+    color: #b9b9bd;
+  }
 }
 
 .center {

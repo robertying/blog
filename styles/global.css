@@ -7,6 +7,7 @@ body {
     Apple Color Emoji, Segoe UI Emoji;
   line-height: 1.6;
   font-size: 18px;
+  scrollbar-color: auto;
 }
 
 * {
@@ -14,7 +15,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: rgb(0, 122, 255);
   text-decoration: none;
 }
 
@@ -25,15 +26,4 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
-}
-
-code,
-pre {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-}
-
-.markdown-body {
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 3rem auto;
 }
