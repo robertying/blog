@@ -11,7 +11,7 @@
     "@types/gtag.js": "0.0.3",
     "@types/node": "13.13.4",
     "@types/react": "16.9.34",
-    "dayjs": "1.8.25",
+    "dayjs": "1.8.26",
     "gray-matter": "4.0.2",
     "highlight.js": "10.0.1",
     "imagemin-cli": "5.1.0",
