@@ -32,4 +32,11 @@
   text-align: center;
   font-size: smaller;
   margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer > a {
+  margin: 8px;
 }

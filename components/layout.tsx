@@ -105,6 +105,13 @@ export default function Layout({
         >
           CC BY-NC-SA 4.0
         </a>
+        <a
+          href="http://www.beian.miit.gov.cn/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          浙ICP备20024838号
+        </a>
       </footer>
     </div>
   );
