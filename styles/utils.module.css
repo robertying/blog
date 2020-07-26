@@ -48,12 +48,12 @@
 }
 
 .lightText {
-  color: rgb(142, 142, 147);
+  color: #74747c;
 }
 
 @media (prefers-color-scheme: light) {
   .lightText {
-    color: rgb(142, 142, 147);
+    color: #74747c;
   }
 }
 
