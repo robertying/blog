@@ -1,65 +1,57 @@
+import dayjs from "dayjs";
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
-import { mdToHtml } from "./markdown";
 
-const postsDirectory = path.join(process.cwd(), "content/posts");
+const postsDirectory = path.join(process.cwd(), "pages/posts");
 
 export interface PostData {
   id: string;
   date: string;
   title: string;
   description: string;
-  contentHtml: string;
 }
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-
+    const id = fileName.replace(/\.mdx$/, "");
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    const matterResult = matter(fileContents);
+    const ast = require("@babel/parser").parse(
+      fileContents
+        .split("\n\n")
+        .find((t) => t.startsWith("export const metadata")),
+      {
+        sourceType: "module",
+      }
+    );
+    const metadataAst = ast.program.body[0].declaration.declarations.find(
+      (d: any) => d.id.name === "metadata"
+    );
+    const properties = metadataAst.init.properties;
+
+    const metadata = properties.reduce(
+      (acc: any, cur: any) => ({
+        ...acc,
+        [cur.key.name]: cur.value.value,
+      }),
+      {}
+    );
 
     return {
       id,
-      ...matterResult.data,
+      ...metadata,
     } as PostData;
   });
 
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+  allPostsData.sort((a, b) => {
+    if (dayjs(a.date).isBefore(dayjs(b.date))) {
       return 1;
     } else {
       return -1;
     }
   });
-}
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
-}
-
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-
-  const matterResult = matter(fileContents);
-
-  const contentHtml = await mdToHtml(matterResult.content);
-
-  return {
-    id,
-    contentHtml,
-    ...matterResult.data,
-  } as PostData;
+  return allPostsData;
 }
