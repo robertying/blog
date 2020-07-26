@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import Layout from "components/Layout";
-import Date from "components/Date";
+import MyDate from "components/MyDate";
 import utilStyles from "styles/utils.module.css";
 import { getSortedPostsData, PostData } from "lib/posts";
 
@@ -28,7 +28,7 @@ export default function Home({ allPostsData }: HomeProps) {
               </Link>
               <p className={utilStyles.description}>{description}</p>
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <MyDate dateString={date} />
               </small>
             </li>
           ))}

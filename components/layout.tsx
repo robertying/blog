@@ -4,13 +4,10 @@ import Link from "next/link";
 import Img from "react-optimized-image";
 import { name } from "lib/meta";
 
-export default function Layout({
-  children,
-  home,
-}: {
+const Layout: React.FC<{
   children: React.ReactNode;
   home?: boolean;
-}) {
+}> = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -90,4 +87,6 @@ export default function Layout({
       </footer>
     </div>
   );
-}
+};
+
+export default Layout;

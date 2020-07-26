@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Layout from "./Layout";
-import Date from "./Date";
+import MyDate from "./MyDate";
 import utilStyles from "styles/utils.module.css";
 import { PostData } from "lib/posts";
 import { siteName } from "lib/meta";
@@ -28,7 +28,7 @@ const Post: React.FC<PostProps> = ({ children, metadata }) => {
         <h1 className={utilStyles.headingXl}>{metadata.title}</h1>
         {metadata.date && (
           <div className={`${utilStyles.lightText} ${utilStyles.listItem}`}>
-            <Date dateString={metadata.date} />
+            <MyDate dateString={metadata.date} />
           </div>
         )}
         <div className="markdown-body">{children}</div>
