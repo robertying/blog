@@ -1149,10 +1149,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@primer/css@15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-15.0.0.tgz#b62a8dd693c92a895e11918fe655928b5b8a760c"
-  integrity sha512-9jMRl9rOsdy8kE7AW0tM3tyom1PTV7JMT1TCE9FgZ8HDM2xAaM5+apb0Ss4RZ7+5eAZbW9ayGX+iXyL6aHPhgg==
+"@primer/css@15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-15.1.0.tgz#8158724f8709a2d09b36b6f7f4ff8b2e62725290"
+  integrity sha512-UmmfjwA26FhOGBMuAfJQOBeRHz9YUcw7khPtifp7K+VyTDEhLnJPRTdApxtivH69vHTkSJ3rh/W1gWYolrLgVA==
   dependencies:
     "@primer/octicons" "^9.1.1"
 
