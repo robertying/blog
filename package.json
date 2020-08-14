@@ -16,7 +16,7 @@
     "@types/mdx-js__react": "1.5.2",
     "@types/node": "14.0.27",
     "@types/react": "16.9.46",
-    "dayjs": "1.8.32",
+    "dayjs": "1.8.33",
     "next": "9.5.1",
     "next-compose-plugins": "2.2.0",
     "next-optimized-images": "3.0.0-canary.10",
