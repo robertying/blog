@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.18",
-    "@next/bundle-analyzer": "9.5.3",
-    "@next/mdx": "9.5.3",
+    "@next/bundle-analyzer": "9.5.4",
+    "@next/mdx": "9.5.4",
     "@primer/css": "15.2.0",
     "@types/gtag.js": "0.0.3",
     "@types/mdx-js__react": "1.5.3",
