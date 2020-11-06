@@ -4910,10 +4910,10 @@ next-optimized-images@3.0.0-canary.10:
     optimized-images-loader "^0.4.0"
     react-optimized-image "^0.4.1"
 
-next-seo@4.14.1:
-  version "4.14.1"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.14.1.tgz#0ff5472da3dd3067a28c78026208525f310ed676"
-  integrity sha512-Te1wBcRoSht1BaL2f9Dh3ZEPYAcltgeIgierZqIZ1knfNMjt17A4x+Y0xxZgZmQjanqAbKcozaLgq7h0rzhEaA==
+next-seo@4.15.1:
+  version "4.15.1"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.15.1.tgz#d1cb51615739690040110b581bfb51d979307a1f"
+  integrity sha512-jRYUOKbSFirwNRTaYFThu0BLBA1oWJIUq076QQ8uXBP6GG6Eh2/aPcXDoeOt33S1qghTJ60MwW1BkCbN889MIg==
 
 next-tick@~1.0.0:
   version "1.0.0"
