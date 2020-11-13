@@ -8,7 +8,7 @@
     "analyze": "ANALYZE=true yarn build"
   },
   "dependencies": {
-    "@mdx-js/loader": "1.6.19",
+    "@mdx-js/loader": "1.6.21",
     "@next/bundle-analyzer": "10.0.1",
     "@next/mdx": "10.0.1",
     "@primer/css": "15.2.0",
