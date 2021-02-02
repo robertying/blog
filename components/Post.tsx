@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import utilStyles from "styles/utils.module.css";
 import Layout from "components/Layout";
 import Date from "components/Date";
-import utilStyles from "styles/utils.module.css";
-import { PostData } from "lib/posts";
+import { PostData } from "lib/post";
 import { siteName } from "lib/meta";
 
 export interface PostProps {

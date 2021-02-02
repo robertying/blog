@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
-import Layout from "components/Layout";
 import utilStyles from "styles/utils.module.css";
+import Layout from "components/Layout";
 
 export default function NotFound() {
   return (

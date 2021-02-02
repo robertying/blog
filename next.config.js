@@ -1,21 +1,11 @@
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
-const withMDX = require("@next/mdx");
-const withBundleAnalyzer = require("@next/bundle-analyzer");
+const withMDX = require("@next/mdx")({
+  options: {
+    remarkPlugins: [require("remark-unwrap-images")],
+    rehypePlugins: [require("./plugins/imageMetadata")],
+  },
+  extension: /\.mdx?$/,
+});
 
-module.exports = withPlugins([
-  [
-    withMDX({
-      extension: /\.mdx?$/,
-    }),
-    {
-      pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-    },
-  ],
-  [optimizedImages],
-  [
-    withBundleAnalyzer({
-      enabled: process.env.ANALYZE === "true",
-    }),
-  ],
-]);
+module.exports = withMDX({
+  pageExtensions: ["ts", "tsx", "mdx"],
+});

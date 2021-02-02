@@ -1,26 +1,31 @@
 import styles from "components/Layout.module.css";
 import utilStyles from "styles/utils.module.css";
 import Link from "next/link";
-import Img from "react-optimized-image";
+import Image from "next/image";
 import { name } from "lib/meta";
 
-const Layout: React.FC<{
+const ProfileImage = () => (
+  <Image
+    src="/images/profile.jpg"
+    className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+    alt={name}
+    width={192}
+    height={192}
+  />
+);
+
+export interface LayoutProps {
   children: React.ReactNode;
   home?: boolean;
-}> = ({ children, home }) => {
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         {home ? (
           <>
-            <Img
-              src={require("assets/images/profile.jpg")}
-              webp
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-              width="192"
-              height="192"
-            />
+            <ProfileImage />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
             <div className={styles.links}>
               <Link href="/about">
@@ -43,14 +48,7 @@ const Layout: React.FC<{
           <>
             <Link href="/">
               <a>
-                <Img
-                  src={require("assets/images/profile.jpg")}
-                  webp
-                  className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                  width="192"
-                  height="192"
-                />
+                <ProfileImage />
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>

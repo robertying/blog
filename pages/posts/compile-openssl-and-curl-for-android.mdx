@@ -7,7 +7,11 @@ export const metadata = {
 
 > TL;DR
 >
-> For anyone that only wants pre-compiled static libraries of openssl and curl, check out this [repo](https://github.com/robertying/openssl-curl-android) and its releases.
+> For anyone that only wants pre-compiled static libraries of openssl and curl, check out this repo [robertying/openssl-curl-android](https://github.com/robertying/openssl-curl-android) and its releases.
+
+> Note:
+>
+> The way of compiling the libs have been drastically changed since I wrote this post. The following only serves as a demonstration of ideas. Please refer to [robertying/openssl-curl-android](https://github.com/robertying/openssl-curl-android) for the latest working scripts.
 
 Compiling openssl and curl can be a natural request if you are integrating some C libraries into your Android project. Android use four ABIs that are not compatible with modern desktop environments, so we will have to `cross-compile` those libraries to be able to run them on mobile devices.
 

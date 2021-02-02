@@ -21,6 +21,10 @@
     color: #87bcff;
   }
 
+  .markdown-body img {
+    background-color: #2d2d2d;
+  }
+
   .markdown-body blockquote {
     color: #b0bbc7;
   }

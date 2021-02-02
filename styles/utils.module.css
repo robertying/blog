@@ -71,3 +71,7 @@
   font-size: smaller;
   margin: 0.6rem auto;
 }
+
+.imageGutter {
+  margin: 1rem auto;
+}

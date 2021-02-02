@@ -1,6 +1,10 @@
 import dayjs from "dayjs";
 
-const Date: React.FC<{ dateString: string }> = ({ dateString }) => {
+export interface DateProps {
+  dateString: string;
+}
+
+const Date: React.FC<DateProps> = ({ dateString }) => {
   return (
     <time dateTime={dateString}>{dayjs(dateString).format("MMM D, YYYY")}</time>
   );

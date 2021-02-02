@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
+import utilStyles from "styles/utils.module.css";
 import Layout from "components/Layout";
 import Date from "components/Date";
-import utilStyles from "styles/utils.module.css";
-import { getSortedPostsData, PostData } from "lib/posts";
+import { getSortedPostsData, PostData } from "lib/post";
 
 interface HomeProps {
   allPostsData: PostData[];
