@@ -7,8 +7,8 @@ const ProfileImage = ({ size }: { size?: "small" | "large" }) => (
     src="/images/profile.jpg"
     className="rounded-full"
     alt={name}
-    width={size === "small" ? 96 : 144}
-    height={size === "small" ? 96 : 144}
+    width={size === "small" ? 96 : 192}
+    height={size === "small" ? 96 : 192}
   />
 );
 
@@ -24,8 +24,8 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
         {home ? (
           <>
             <ProfileImage size="large" />
-            <div className="text-4xl font-bold">{name}</div>
-            <div className="text-lg font-medium flex flex-row items-center  space-x-4">
+            <div className="text-4xl font-extrabold">{name}</div>
+            <div className="flex flex-row items-center space-x-4">
               <Link href="/about">
                 <a className="text-center">About Me</a>
               </Link>
@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
               </a>
               <a href="mailto:yingrui205@gmail.com">Email</a>
             </div>
-            <div className="text-sm text-center">{siteDescription}</div>
+            <div className="text-center">{siteDescription}</div>
           </>
         ) : (
           <>

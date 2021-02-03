@@ -6,7 +6,6 @@
   html,
   body {
     font-size: 18px;
-    @apply antialiased;
   }
 
   a {
