@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-size: 18px;
+    @apply antialiased;
+  }
+
+  a {
+    @apply text-blue-600;
+  }
+
+  a:hover {
+    @apply underline;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html,
+    body {
+      background: #2d2d2d;
+      color: white;
+    }
+
+    a {
+      @apply text-blue-400;
+    }
+  }
+}

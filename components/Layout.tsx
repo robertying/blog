@@ -1,16 +1,14 @@
-import styles from "components/Layout.module.css";
-import utilStyles from "styles/utils.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { name } from "lib/meta";
+import { name, siteDescription } from "lib/meta";
 
-const ProfileImage = () => (
+const ProfileImage = ({ size }: { size?: "small" | "large" }) => (
   <Image
     src="/images/profile.jpg"
-    className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+    className="rounded-full"
     alt={name}
-    width={192}
-    height={192}
+    width={size === "small" ? 96 : 144}
+    height={size === "small" ? 96 : 144}
   />
 );
 
@@ -21,15 +19,15 @@ export interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, home }) => {
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
+    <div className="max-w-xl mx-auto px-6 my-12">
+      <header className="flex flex-col items-center space-y-4">
         {home ? (
           <>
-            <ProfileImage />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            <div className={styles.links}>
+            <ProfileImage size="large" />
+            <div className="text-4xl font-bold">{name}</div>
+            <div className="text-lg font-medium flex flex-row items-center  space-x-4">
               <Link href="/about">
-                <a>About Me</a>
+                <a className="text-center">About Me</a>
               </Link>
               <Link href="/projects">
                 <a>Projects</a>
@@ -37,37 +35,34 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
               <a
                 href="https://github.com/robertying"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
               >
                 GitHub
               </a>
               <a href="mailto:yingrui205@gmail.com">Email</a>
             </div>
+            <div className="text-sm text-center">{siteDescription}</div>
           </>
         ) : (
           <>
             <Link href="/">
               <a>
-                <ProfileImage />
+                <ProfileImage size="small" />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
+            <Link href="/">
+              <a className="text-lg font-medium">{name}</a>
+            </Link>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className="my-8">{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
+        <Link href="/">
+          <a className="text-lg font-medium">← Back to home</a>
+        </Link>
       )}
-      <footer className={styles.footer}>
+      <footer className="text-xs mt-8 flex flex-col space-y-4 items-center">
         <a
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           target="_blank"

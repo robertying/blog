@@ -1,12 +1,15 @@
 import dayjs from "dayjs";
 
 export interface DateProps {
+  className?: string;
   dateString: string;
 }
 
-const Date: React.FC<DateProps> = ({ dateString }) => {
+const Date: React.FC<DateProps> = ({ className, dateString }) => {
   return (
-    <time dateTime={dateString}>{dayjs(dateString).format("MMM D, YYYY")}</time>
+    <time className={className} dateTime={dateString}>
+      {dayjs(dateString).format("MMM D, YYYY")}
+    </time>
   );
 };
 

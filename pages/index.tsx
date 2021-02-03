@@ -1,6 +1,5 @@
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 import Link from "next/link";
-import utilStyles from "styles/utils.module.css";
 import Layout from "components/Layout";
 import Date from "components/Date";
 import { getSortedPostsData, PostData } from "lib/post";
@@ -12,28 +11,20 @@ interface HomeProps {
 export default function Home({ allPostsData }: HomeProps) {
   return (
     <Layout home>
-      <section className={`${utilStyles.headingMd} ${utilStyles.center}`}>
-        <p>
-          EE undergraduate at Tsinghua University. Incoming CS MS graduate at
-          Stanford University.
-        </p>
-        <p>💻 Love computer stuff.</p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, description }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <p className={utilStyles.description}>{description}</p>
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <ul className="flex flex-col space-y-8">
+        {allPostsData.map(({ id, date, title, description }) => (
+          <li className="flex flex-col space-y-2" key={id}>
+            <Link href={`/posts/${id}`}>
+              <a className="text-lg font-medium">{title}</a>
+            </Link>
+            <p>{description}</p>
+            <Date
+              className="text-gray-600 dark:text-gray-400 text-sm"
+              dateString={date}
+            />
+          </li>
+        ))}
+      </ul>
     </Layout>
   );
 }

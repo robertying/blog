@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import utilStyles from "styles/utils.module.css";
 import Layout from "components/Layout";
 import Date from "components/Date";
 import { PostData } from "lib/post";
@@ -24,14 +23,15 @@ const Post: React.FC<PostProps> = ({ children, metadata }) => {
           description: metadata.description,
         }}
       />
-      <article>
-        <h1 className={utilStyles.headingXl}>{metadata.title}</h1>
+      <article className="flex flex-col">
+        <h1 className="text-3xl font-bold">{metadata.title}</h1>
         {metadata.date && (
-          <div className={`${utilStyles.lightText} ${utilStyles.listItem}`}>
-            <Date dateString={metadata.date} />
-          </div>
+          <Date
+            className="mt-2 text-gray-600 dark:text-gray-400"
+            dateString={metadata.date}
+          />
         )}
-        <div className="markdown-body">{children}</div>
+        <div className="my-6 markdown-body">{children}</div>
       </article>
     </Layout>
   );

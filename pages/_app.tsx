@@ -1,7 +1,6 @@
 import "@primer/css/dist/markdown.css";
-import "styles/global.css";
 import "styles/markdown.css";
-import "styles/scheme.css";
+import "styles/index.css";
 import { useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
@@ -9,21 +8,21 @@ import Router from "next/router";
 import Image from "next/image";
 import { DefaultSeo } from "next-seo";
 import { MDXProvider, MDXProviderComponentsProp } from "@mdx-js/react";
-import utilStyles from "styles/utils.module.css";
 import Code from "components/Code";
 import Post from "components/Post";
 import * as gtag from "lib/gtag";
-import { siteName } from "lib/meta";
+import { siteDescription, siteName } from "lib/meta";
 
 const components: MDXProviderComponentsProp = {
   wrapper: Post,
   code: Code,
   a: (props) => <a target="_blank" rel="noopener" {...props} />,
   img: (props) => (
-    <div className={utilStyles.imageGutter}>
+    <div className="my-4">
       <Image layout="responsive" {...props} />
     </div>
   ),
+  ul: (props) => <ul className="list-disc" {...props} />,
 };
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -71,7 +70,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <DefaultSeo
         title="Home"
         titleTemplate={`%s | ${siteName}`}
-        description="EE undergraduate at Tsinghua University. Incoming CS MS graduate at Stanford University."
+        description={siteDescription}
         twitter={{
           cardType: "summary",
           site: "@robert_ying",

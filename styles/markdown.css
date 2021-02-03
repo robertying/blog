@@ -1,9 +1,18 @@
-code,
-pre {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-}
-
 .markdown-body {
   font-size: 18px;
-  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body img {
+    background-color: #2d2d2d;
+  }
+
+  .markdown-body blockquote {
+    color: #b0bbc7;
+  }
+
+  .markdown-body code,
+  .markdown-body pre {
+    background-color: rgba(27, 31, 35, 0.95);
+  }
 }
