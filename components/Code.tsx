@@ -4,7 +4,7 @@ import darkTheme from "prism-react-renderer/themes/nightOwl";
 import useMedia from "use-media";
 
 const Code: React.FC<HTMLPreElement> = ({ children, className }) => {
-  const language = className.replace(/language-/, "");
+  const language = className?.replace(/language-/, "");
 
   const darkMode = useMedia("(prefers-color-scheme: dark)");
 
