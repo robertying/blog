@@ -50,19 +50,17 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
                 <ProfileImage size="small" />
               </a>
             </Link>
-            <Link href="/">
-              <a className="text-lg font-medium">{name}</a>
-            </Link>
+            <div className="text-lg">{name}</div>
           </>
         )}
       </header>
-      <main className="my-8">{children}</main>
+      <main className="mt-8">{children}</main>
       {!home && (
         <Link href="/">
           <a className="text-lg font-medium">← Back to home</a>
         </Link>
       )}
-      <footer className="text-xs mt-8 flex flex-col space-y-4 items-center">
+      <footer className="text-xs mt-16 flex flex-col space-y-4 items-center">
         <a
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           target="_blank"
