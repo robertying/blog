@@ -24,6 +24,69 @@ Well. Right after I typed these words, I start to wonder if this is actually pos
 
 As long as we can handle frontmatter in MDX, we could follow NextJS's doc on [building a blog](https://github.com/vercel/next-learn-starter) to generate a table of contents.
 
+> Update:
+>
+> After I wrote this post, I did some work to adopt this approach.
+>
+> There seems to be some extra work if you want to use the custom loader with NextJS.
+
+After completing the custom loader script, I need to add the loader before MDX's, which involves changing babel configurations.
+
+With NextJS, we better use plugins to help change babel configurations. Here is the full `next.config.js` to add our custom loader to the chain:
+
+```js
+const withPlugins = require("next-compose-plugins");
+
+const withMDX = require("@next/mdx")({
+  options: {
+    remarkPlugins: [
+      /* some plugins */
+    ],
+    rehypePlugins: [
+      /* some plugins */
+    ],
+  },
+  extension: /\.mdx?$/,
+});
+
+const withFrontmatter = (nextConfig = {}) => {
+  return Object.assign({}, nextConfig, {
+    webpack(config, options) {
+      config.module.rules = config.module.rules.map((rule) => {
+        if (rule.test && rule.test.test(".mdx")) {
+          return {
+            ...rule,
+            use: [...rule.use, require.resolve("./plugins/frontmatter")],
+          };
+        } else {
+          return rule;
+        }
+      });
+
+      if (typeof nextConfig.webpack === "function") {
+        return nextConfig.webpack(config, options);
+      }
+
+      return config;
+    },
+  });
+};
+
+module.exports = withPlugins([
+  [withFrontmatter],
+  [
+    withMDX,
+    {
+      pageExtensions: ["ts", "tsx", "mdx"],
+    },
+  ],
+]);
+```
+
+`./plugins/frontmatter` should be where you place the custom loader script.
+
+Be aware that plugins/loaders run in the order of last to first.
+
 ## Alternative Path
 
 There is another way of doing this which involves using JS code in MDX and Babel parsing.
