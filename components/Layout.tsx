@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
           CC BY-NC-SA 4.0
         </a>
         <a
-          href="http://www.beian.miit.gov.cn/"
+          href="https://beian.miit.gov.cn/"
           target="_blank"
           rel="noopener noreferrer"
         >
