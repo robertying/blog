@@ -74,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          浙ICP备20024838号
+          浙ICP备20024838号-1
         </a>
       </footer>
     </div>
