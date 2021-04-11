@@ -16,15 +16,21 @@
     @apply underline;
   }
 
-  @media (prefers-color-scheme: dark) {
-    html,
-    body {
-      background: #2d2d2d;
-      color: white;
-    }
+  .markdown-body {
+    font-size: 18px;
+  }
 
+  .markdown-body img {
+    @apply bg-gray-200;
+  }
+
+  @media (prefers-color-scheme: dark) {
     a {
       @apply text-blue-400;
+    }
+
+    .markdown-body img {
+      @apply bg-gray-700;
     }
   }
 }

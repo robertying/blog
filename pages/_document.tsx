@@ -24,7 +24,11 @@ export default class extends Document {
             }}
           />
         </Head>
-        <body>
+        <body
+          data-color-mode="auto"
+          data-light-theme="light"
+          data-dark-theme="dark_dimmed"
+        >
           <Main />
           <NextScript />
         </body>

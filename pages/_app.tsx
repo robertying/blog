@@ -1,5 +1,5 @@
+import "@primer/css/dist/core.css";
 import "@primer/css/dist/markdown.css";
-import "styles/markdown.css";
 import "styles/index.css";
 import { useEffect } from "react";
 import { AppProps } from "next/app";
