@@ -6,7 +6,7 @@ export default function NotFound() {
     <Layout>
       <NextSeo title="Not Found" />
       <h1 className="text-3xl font-bold">Are you lost?</h1>
-      <p className="mt-4">The stuff you requested is not found.</p>
+      <p className="my-4">The stuff you requested is not found.</p>
     </Layout>
   );
 }
