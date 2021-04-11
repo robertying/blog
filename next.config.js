@@ -31,12 +31,21 @@ const withFrontmatter = (nextConfig = {}) => {
   });
 };
 
-module.exports = withPlugins([
-  [withFrontmatter],
+module.exports = withPlugins(
   [
-    withMDX,
-    {
-      pageExtensions: ["ts", "tsx", "mdx"],
-    },
+    [withFrontmatter],
+    [
+      withMDX,
+      {
+        pageExtensions: ["ts", "tsx", "mdx"],
+      },
+    ],
   ],
-]);
+  {
+    reactStrictMode: true,
+    future: {
+      webpack5: true,
+      strictPostcssConfiguration: true,
+    },
+  }
+);
