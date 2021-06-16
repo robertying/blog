@@ -1,6 +1,6 @@
 const { promisify } = require("util");
 const path = require("path");
-const visit = require("unist-util-visit");
+const visit = require("unist-util-visit2");
 const sizeOf = promisify(require("image-size"));
 
 const isImageNode = (node) => {
