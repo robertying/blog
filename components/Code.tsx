@@ -18,9 +18,9 @@ const Code: React.FC<HTMLPreElement> = ({ children, className }) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <code className={className} style={style}>
           {tokens.slice(0, tokens.length - 1).map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
+            <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
+                <span key={key} {...getTokenProps({ token, key })} />
               ))}
             </div>
           ))}

@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
               <a
                 href="https://github.com/robertying"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 GitHub
               </a>
