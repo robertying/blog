@@ -18,7 +18,7 @@ const Post: React.FC<PostProps> = ({ children, metadata }) => {
         title={metadata.title}
         description={metadata.description}
         openGraph={{
-          url: `https://robertying.io${router.pathname}`,
+          url: `https://robertying.io${router.asPath}`,
           title: `${metadata.title} | ${siteName}`,
           description: metadata.description,
         }}
