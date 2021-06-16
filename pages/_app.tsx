@@ -1,11 +1,11 @@
 import "@primer/css/dist/base.css";
-import "@primer/css/dist/markdown.css";
 import "styles/index.css";
+import "@primer/css/dist/markdown.css";
 import "styles/markdown.css";
 import { useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import Router from "next/router";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { DefaultSeo } from "next-seo";
 import { MDXProvider, MDXProviderComponentsProp } from "@mdx-js/react";
@@ -14,28 +14,36 @@ import Post from "components/Post";
 import * as gtag from "lib/gtag";
 import { siteDescription, siteName } from "lib/meta";
 
+/* eslint-disable react/display-name */
 const components: MDXProviderComponentsProp = {
   wrapper: Post,
   code: Code,
-  a: (props) => <a target="_blank" rel="noopener" {...props} />,
+  a: (props) =>
+    props.src?.startsWith("/") ? (
+      <a {...props} />
+    ) : (
+      <a target="_blank" rel="noopener noreferrer" {...props} />
+    ),
   img: (props) => (
     <div className="my-4">
-      <Image layout="responsive" {...props} />
+      <Image layout="responsive" alt="" {...props} />
     </div>
   ),
-  ul: (props) => <ul className="list-disc" {...props} />,
 };
+/* eslint-enable react/display-name */
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
-    Router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      Router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, []);
+  }, [router]);
 
   return (
     <>
@@ -81,8 +89,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           type: "website",
           images: [
             {
-              url:
-                "https://og-image.now.sh/Blog%20by%20**Rui%20Ying**.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg&images=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Frobertying%2Fblog%40master%2Fpublic%2Fandroid-chrome-512x512.png",
+              url: "https://og-image.now.sh/Blog%20by%20**Rui%20Ying**.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg&images=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Frobertying%2Fblog%40master%2Fpublic%2Fandroid-chrome-512x512.png",
             },
           ],
         }}
