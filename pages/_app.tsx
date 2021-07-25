@@ -55,7 +55,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <meta name="application-name" content={siteName} />
         <meta name="apple-mobile-web-app-title" content={siteName} />
-        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
