@@ -1,7 +1,7 @@
 import "@primer/css/dist/base.css";
+import "@primer/css/dist/color-modes.css";
 import "@primer/css/dist/markdown.css";
 import "styles/index.css";
-import "styles/markdown.css";
 import { useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
