@@ -14,7 +14,6 @@ import Post from "components/Post";
 import * as gtag from "lib/gtag";
 import { siteDescription, siteName } from "lib/meta";
 
-/* eslint-disable react/display-name */
 const components: MDXProviderComponentsProp = {
   wrapper: Post,
   code: Code,
@@ -30,7 +29,6 @@ const components: MDXProviderComponentsProp = {
     </div>
   ),
 };
-/* eslint-enable react/display-name */
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();

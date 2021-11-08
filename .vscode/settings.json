@@ -1,9 +1,5 @@
 {
   "cSpell.enableFiletypes": ["mdx"],
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }
