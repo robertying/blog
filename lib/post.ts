@@ -13,19 +13,22 @@ export interface PostData {
 }
 
 export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.mdx$/, "");
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContent = fs.readFileSync(fullPath, "utf-8");
+  const fileNames = fs.readdirSync(postsDirectory, { withFileTypes: true });
+  const allPostsData = fileNames
+    .filter((f) => f.isFile())
+    .map((file) => {
+      const fileName = file.name;
+      const id = fileName.replace(/\.mdx$/, "");
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContent = fs.readFileSync(fullPath, "utf-8");
 
-    const { data } = matter(fileContent);
+      const { data } = matter(fileContent);
 
-    return {
-      id,
-      ...data,
-    } as PostData;
-  });
+      return {
+        id,
+        ...data,
+      } as PostData;
+    });
 
   allPostsData.sort((a, b) => {
     if (dayjs(a.date).isBefore(dayjs(b.date))) {
