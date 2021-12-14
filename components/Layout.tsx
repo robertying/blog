@@ -1,15 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
 import { name, siteDescription } from "lib/meta";
 
 const ProfileImage = ({ size }: { size?: "small" | "large" }) => (
-  <Image
+  // eslint-disable-next-line
+  <img
     className="rounded-full"
     src="/images/profile.jpg"
     alt={name}
     width={size === "small" ? 96 : 192}
     height={size === "small" ? 96 : 192}
-    priority
   />
 );
 

@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import { DefaultSeo } from "next-seo";
 import { MDXProvider, MDXProviderComponentsProp } from "@mdx-js/react";
 import Code from "components/Code";
@@ -23,11 +22,8 @@ const components: MDXProviderComponentsProp = {
     ) : (
       <a target="_blank" rel="noopener noreferrer" {...props} />
     ),
-  img: (props) => (
-    <div className="my-4">
-      <Image layout="responsive" alt="" {...props} />
-    </div>
-  ),
+  // eslint-disable-next-line
+  img: (props) => <img className="my-4" {...props} />,
 };
 
 const App = ({ Component, pageProps }: AppProps) => {
