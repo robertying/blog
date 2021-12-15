@@ -11,7 +11,6 @@ const ProfileImage = ({ size }: { size?: "small" | "large" }) => (
     width={size === "small" ? 96 : 192}
     height={size === "small" ? 96 : 192}
     priority
-    placeholder="blur"
   />
 );
 
