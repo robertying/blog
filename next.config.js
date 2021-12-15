@@ -3,9 +3,8 @@ const withPlugins = require("next-compose-plugins");
 const withMDX = require("@next/mdx")({
   options: {
     remarkPlugins: [require("remark-unwrap-images")],
-    rehypePlugins: [require("./plugins/imageMetadata")],
+    rehypePlugins: [],
   },
-  extension: /\.mdx?$/,
 });
 
 const withFrontmatter = (nextConfig = {}) => {
@@ -31,17 +30,10 @@ const withFrontmatter = (nextConfig = {}) => {
   });
 };
 
-module.exports = withPlugins(
-  [
-    [withFrontmatter],
-    [
-      withMDX,
-      {
-        pageExtensions: ["ts", "tsx", "mdx"],
-      },
-    ],
-  ],
-  {
-    reactStrictMode: true,
-  }
-);
+module.exports = withPlugins([withFrontmatter, withMDX], {
+  reactStrictMode: true,
+  pageExtensions: ["tsx", "mdx"],
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+});

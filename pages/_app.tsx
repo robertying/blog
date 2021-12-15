@@ -22,8 +22,6 @@ const components: MDXProviderComponentsProp = {
     ) : (
       <a target="_blank" rel="noopener noreferrer" {...props} />
     ),
-  // eslint-disable-next-line
-  img: (props) => <img className="my-4" {...props} />,
 };
 
 const App = ({ Component, pageProps }: AppProps) => {
