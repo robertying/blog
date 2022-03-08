@@ -37,4 +37,7 @@ module.exports = withPlugins([withFrontmatter, withMDX], {
     formats: ["image/avif", "image/webp"],
   },
   compress: false,
+  experimental: {
+    outputStandalone: true,
+  },
 });
