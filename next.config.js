@@ -3,7 +3,7 @@ const withPlugins = require("next-compose-plugins");
 const withMDX = require("@next/mdx")({
   options: {
     remarkPlugins: [require("remark-unwrap-images")],
-    rehypePlugins: [],
+    rehypePlugins: [require("./plugins/imageMetadata")],
   },
 });
 
@@ -36,4 +36,5 @@ module.exports = withPlugins([withFrontmatter, withMDX], {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  compress: false,
 });

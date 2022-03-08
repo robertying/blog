@@ -1,7 +1,9 @@
 const matter = require("gray-matter");
 const stringifyObject = require("stringify-object");
 
-module.exports = function (src) {
+module.exports = async function (src) {
+  const callback = this.async();
   const { content, data } = matter(src);
-  return `export const metadata = ${stringifyObject(data)}\n${content}`;
+  const code = `export const metadata = ${stringifyObject(data)}\n${content}`;
+  return callback(null, code);
 };

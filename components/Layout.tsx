@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { name, siteDescription } from "lib/meta";
-import profileImage from "public/images/profile.jpg";
 
 const ProfileImage = ({ size }: { size?: "small" | "large" }) => (
   <Image
     className="rounded-full"
-    src={profileImage}
+    src="/images/profile.jpg"
     alt={name}
     width={size === "small" ? 96 : 192}
     height={size === "small" ? 96 : 192}
