@@ -9,7 +9,7 @@ export interface PostProps {
   metadata: PostData;
 }
 
-const Post: React.FC<PostProps> = ({ children, metadata }) => {
+const Post: React.FC<React.PropsWithChildren<PostProps>> = ({ children, metadata }) => {
   const router = useRouter();
 
   return (

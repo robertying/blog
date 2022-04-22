@@ -5,7 +5,7 @@ export interface DateProps {
   dateString: string;
 }
 
-const Date: React.FC<DateProps> = ({ className, dateString }) => {
+const Date: React.FC<React.PropsWithChildren<DateProps>> = ({ className, dateString }) => {
   return (
     <time className={className} dateTime={dateString}>
       {dayjs(dateString).format("MMM D, YYYY")}

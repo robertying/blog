@@ -18,7 +18,7 @@ export interface LayoutProps {
   home?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, home }) => {
+const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({ children, home }) => {
   return (
     <div className="max-w-xl mx-auto px-6 my-12">
       <header className="flex flex-col items-center space-y-4">
