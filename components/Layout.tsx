@@ -1,24 +1,29 @@
 import Link from "next/link";
-import Image from "next/image";
 import { name, siteDescription } from "lib/meta";
 
 const ProfileImage = ({ size }: { size?: "small" | "large" }) => (
-  <Image
-    className="rounded-full"
-    src="/images/profile.jpg"
-    alt={name}
-    width={size === "small" ? 96 : 192}
-    height={size === "small" ? 96 : 192}
-    priority
-  />
+  <picture>
+    <source srcSet="/images/profile.avif" type="image/avif" />
+    <source srcSet="/images/profile.webp" type="image/webp" />
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
+      className="rounded-full"
+      src="/images/profile.jpg"
+      alt={name}
+      width={size === "small" ? 96 : 192}
+      height={size === "small" ? 96 : 192}
+    />
+  </picture>
 );
 
 export interface LayoutProps {
-  children: React.ReactNode;
   home?: boolean;
 }
 
-const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({ children, home }) => {
+const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({
+  children,
+  home,
+}) => {
   return (
     <div className="max-w-xl mx-auto px-6 my-12">
       <header className="flex flex-col items-center space-y-4">
@@ -40,7 +45,7 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({ children, home
               >
                 GitHub
               </a>
-              <a href="mailto:yingrui205@gmail.com">Email</a>
+              <a href="mailto:me@ruiying.io">Email</a>
             </div>
             <div className="text-center">{siteDescription}</div>
           </>

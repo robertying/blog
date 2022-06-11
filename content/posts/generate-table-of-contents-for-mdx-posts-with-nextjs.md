@@ -4,7 +4,7 @@ date: "2021-02-04T17:27:00.000+08:00"
 description: I've rewritten my blog (this blog) several times, the latest of which is built with MDX and NextJS. With frontmatter not being an option, I had to find a MDX-compatible way to generate the table of contents for my posts.
 ---
 
-I started the transition to [MDX](https://mdxjs.com/) because I was using [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images) for image optimization. It provides an `Img` component and the component replies on webpack's `require` call to import images. Therefore, I cannot import images dynamically and wrap every `<img>` within `Img` in `MDX provider's components` which is used to customize Markdown-parsed parts, like <a\>, <img\>, <p\>, etc.
+I started the transition to [MDX](https://mdxjs.com/) because I was using [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images) for image optimization. It provides an `Img` component and the component replies on webpack's `require` call to import images. Therefore, I cannot import images dynamically and wrap every `<img>` within `Img` in `MDX provider's components` which is used to customize Markdown-parsed parts, like `<a>`, `<img>`, `<p>`, etc.
 
 So I import `Img` and explicitly place it where there is a picture:
 

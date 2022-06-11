@@ -8,30 +8,48 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install
-        run: yarn install --frozen-lockfile
-      - name: Lint
-        run: yarn lint
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - id: get-store-path
+        run: echo ::set-output name=STORE_PATH::$(pnpm store path)
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.get-store-path.outputs.STORE_PATH }}
+          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-store-
+            pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+      - uses: actions/cache@v3
         with:
           path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
+          key: nextjs-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            nextjs-
+            nextjs-${{ hashFiles('pnpm-lock.yaml') }}
+      - name: Install
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
       - name: Build
-        run: yarn build
+        run: pnpm build
 
   deploy:
     needs: [check]
     runs-on: ubuntu-latest
     env:
-      USERNAME: $GITHUB_ACTOR
+      USERNAME: ${{ github.actor }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       CONTAINER_NAME: blog
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Login into registry
-        run: echo $GITHUB_TOKEN | docker login docker.pkg.github.com -u $USERNAME --password-stdin
+        run: echo $GITHUB_TOKEN | docker login ghcr.io -u $USERNAME --password-stdin
       - name: Build Docker image
-        run: docker build -t docker.pkg.github.com/$GITHUB_REPOSITORY/$CONTAINER_NAME:latest .
+        run: docker build -t ghcr.io/${{ github.repository }}/$CONTAINER_NAME:latest .
       - name: Push to registry
-        run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY/$CONTAINER_NAME:latest
+        run: docker push ghcr.io/${{ github.repository }}/$CONTAINER_NAME:latest

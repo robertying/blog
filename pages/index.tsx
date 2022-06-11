@@ -2,17 +2,17 @@ import type { GetStaticProps } from "next";
 import Link from "next/link";
 import Layout from "components/Layout";
 import Date from "components/Date";
-import { getSortedPostsData, PostData } from "lib/post";
+import { getAllPosts, PostData } from "lib/post";
 
 interface HomeProps {
-  allPostsData: PostData[];
+  posts: PostData[];
 }
 
-export default function Home({ allPostsData }: HomeProps) {
+function Home({ posts }: HomeProps) {
   return (
     <Layout home>
       <ul className="flex flex-col space-y-8">
-        {allPostsData.map(({ id, date, title, description }) => (
+        {posts.map(({ id, date, title, description }) => (
           <li className="flex flex-col space-y-2" key={id}>
             <Link href={`/posts/${id}`}>
               <a className="text-lg font-medium">{title}</a>
@@ -30,10 +30,12 @@ export default function Home({ allPostsData }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const allPostsData = getSortedPostsData();
+  const posts = await getAllPosts();
   return {
     props: {
-      allPostsData,
+      posts,
     },
   };
 };
+
+export default Home;

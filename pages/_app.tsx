@@ -2,35 +2,17 @@ import "@primer/css/dist/base.css";
 import "@primer/css/dist/color-modes.css";
 import "@primer/css/dist/markdown.css";
 import "styles/index.css";
+import "styles/highlight.css";
 import { useEffect } from "react";
-import { AppProps } from "next/app";
+import type { AppProps, NextWebVitalsMetric } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import Script from "next/script";
 import { DefaultSeo } from "next-seo";
-import { MDXProvider, MDXProviderComponentsProp } from "@mdx-js/react";
-import Code from "components/Code";
-import Post from "components/Post";
 import * as gtag from "lib/gtag";
 import { siteDescription, siteName } from "lib/meta";
 
-const components: MDXProviderComponentsProp = {
-  wrapper: Post,
-  code: Code,
-  a: (props) =>
-    props.src?.startsWith("/") ? (
-      <a {...props} />
-    ) : (
-      <a target="_blank" rel="noopener noreferrer" {...props} />
-    ),
-  img: (props) => (
-    <div className="my-4">
-      <Image layout="responsive" alt="" {...props} />
-    </div>
-  ),
-};
-
-const App = ({ Component, pageProps }: AppProps) => {
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -38,10 +20,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       gtag.pageview(url);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("hashChangeComplete", handleRouteChange);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("hashChangeComplete", handleRouteChange);
     };
-  }, [router]);
+  }, [router.events]);
 
   return (
     <>
@@ -77,25 +61,44 @@ const App = ({ Component, pageProps }: AppProps) => {
         title="Home"
         titleTemplate={`%s | ${siteName}`}
         description={siteDescription}
-        twitter={{
-          cardType: "summary",
-          site: "@robert_ying",
-        }}
-        openGraph={{
-          url: "https://robertying.io/",
-          type: "website",
-          images: [
-            {
-              url: "https://og-image.now.sh/Blog%20by%20**Rui%20Ying**.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg&images=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Frobertying%2Fblog%40master%2Fpublic%2Fandroid-chrome-512x512.png",
-            },
-          ],
+      />
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${gtag.GA_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
         }}
       />
-      <MDXProvider components={components}>
-        <Component {...pageProps} />
-      </MDXProvider>
+      <Component {...pageProps} />
     </>
   );
-};
+}
+
+export function reportWebVitals({
+  id,
+  name,
+  label,
+  value,
+}: NextWebVitalsMetric) {
+  window.gtag?.("event", name, {
+    event_category:
+      label === "web-vital" ? "Web Vitals" : "Next.js custom metric",
+    value: Math.round(name === "CLS" ? value * 1000 : value),
+    event_label: id,
+    non_interaction: true,
+  });
+}
 
 export default App;

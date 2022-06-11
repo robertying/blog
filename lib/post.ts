@@ -1,36 +1,42 @@
-import dayjs from "dayjs";
-import fs from "fs";
 import path from "path";
+import fs from "fs-extra";
 import matter from "gray-matter";
+import dayjs from "dayjs";
 
-const postsDirectory = path.join(process.cwd(), "pages/posts");
+const postDirectory = path.join(process.cwd(), "content/posts");
 
 export interface PostData {
   id: string;
   date: string;
   title: string;
   description: string;
+  content: string;
 }
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory, { withFileTypes: true });
-  const allPostsData = fileNames
+export async function getPostIds() {
+  const fileNames = await fs.readdir(postDirectory, { withFileTypes: true });
+  return fileNames
     .filter((f) => f.isFile())
-    .map((file) => {
-      const fileName = file.name;
-      const id = fileName.replace(/\.mdx$/, "");
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContent = fs.readFileSync(fullPath, "utf-8");
+    .map((file) => file.name.replace(/\.md?$/, ""));
+}
 
-      const { data } = matter(fileContent);
+export async function getPostById(id: string) {
+  const fullPath = path.join(postDirectory, `${id}.md`);
+  const fileContent = await fs.readFile(fullPath, "utf-8");
+  const { data, content } = matter(fileContent);
 
-      return {
-        id,
-        ...data,
-      } as PostData;
-    });
+  return {
+    id,
+    ...data,
+    content,
+  } as PostData;
+}
 
-  allPostsData.sort((a, b) => {
+export async function getAllPosts() {
+  const postIds = await getPostIds();
+  const allPosts = await Promise.all(postIds.map((id) => getPostById(id)));
+
+  allPosts.sort((a, b) => {
     if (dayjs(a.date).isBefore(dayjs(b.date))) {
       return 1;
     } else {
@@ -38,5 +44,5 @@ export function getSortedPostsData() {
     }
   });
 
-  return allPostsData;
+  return allPosts;
 }
