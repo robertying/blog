@@ -9,6 +9,8 @@ const nextConfig = {
   compress: false,
   experimental: {
     outputStandalone: true,
+    runtime: "nodejs",
+    serverComponents: true,
   },
 };
 

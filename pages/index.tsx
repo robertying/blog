@@ -1,8 +1,10 @@
+import { lazy, Suspense } from "react";
 import type { GetStaticProps } from "next";
 import Link from "next/link";
 import Layout from "components/Layout";
-import Date from "components/Date";
 import { getAllPosts, PostData } from "lib/post";
+
+const Date = lazy(() => import("components/Date"));
 
 interface HomeProps {
   posts: PostData[];
@@ -18,10 +20,12 @@ function Home({ posts }: HomeProps) {
               <a className="text-lg font-medium">{title}</a>
             </Link>
             <p>{description}</p>
-            <Date
-              className="text-gray-600 dark:text-gray-400 text-sm"
-              dateString={date}
-            />
+            <Suspense fallback="...">
+              <Date
+                className="text-gray-600 dark:text-gray-400 text-sm"
+                dateString={date}
+              />
+            </Suspense>
           </li>
         ))}
       </ul>
