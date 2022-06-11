@@ -16,6 +16,9 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
+RUN apk add --no-cache curl && \
+    curl -fsSL https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64 -o /bin/pnpm && \
+    chmod +x /bin/pnpm
 RUN pnpm build
 RUN node optimizeImages.mjs
 
