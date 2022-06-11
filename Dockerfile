@@ -17,6 +17,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN pnpm build
+RUN node optimizeImages.mjs
 
 
 FROM node:18-alpine AS runner
