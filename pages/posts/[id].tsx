@@ -1,12 +1,10 @@
-import { lazy, Suspense } from "react";
 import type { ParsedUrlQuery } from "querystring";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import Layout from "components/Layout";
+import Date from "components/Date";
 import { getPostById, getPostIds, PostData } from "lib/post";
 import { getHtmlFromMarkdown } from "lib/markdown";
-
-const Date = lazy(() => import("components/Date"));
 
 interface PostProps {
   post: PostData;
@@ -24,12 +22,10 @@ const Post: React.FC<PostProps> = ({ post, body }) => {
       <article className="flex flex-col">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         {post.date && (
-          <Suspense fallback="...">
-            <Date
-              className="mt-2 text-gray-600 dark:text-gray-400"
-              dateString={post.date}
-            />
-          </Suspense>
+          <Date
+            className="mt-2 text-gray-600 dark:text-gray-400"
+            dateString={post.date}
+          />
         )}
         <div
           className="my-6 markdown-body"
