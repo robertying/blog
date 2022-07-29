@@ -1,7 +1,7 @@
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 
 const redirects: any = {
-  "/resume": "https://dl.ruiying.io/Resume_Rui_Ying_EN.pdf",
+  "/resume": "https://dl.ruiying.io/Resume_Rui_Ying.pdf",
 };
 
 export function middleware(req: NextRequest, ev: NextFetchEvent) {
