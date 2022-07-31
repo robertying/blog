@@ -7,8 +7,8 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
   },
   compress: false,
+  output: "standalone",
   experimental: {
-    outputStandalone: true,
     runtime: "nodejs",
     serverComponents: true,
   },

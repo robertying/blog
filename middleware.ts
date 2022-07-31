@@ -1,10 +1,11 @@
-import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 const redirects: any = {
   "/resume": "https://dl.ruiying.io/Resume_Rui_Ying.pdf",
 };
 
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+export function middleware(req: NextRequest) {
   const url = req.nextUrl.pathname;
 
   if (redirects[url]) {
@@ -15,3 +16,7 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: "/:path*",
+};
