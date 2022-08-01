@@ -19,7 +19,4 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: "/:path*",
-  unstable_includeFiles: [
-    "node_modules/next/dist/compiled/@edge-runtime/primitives/**/*.+(js|json)",
-  ],
 };
