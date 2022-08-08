@@ -10,7 +10,9 @@ const Date: React.FC<React.PropsWithChildren<DateProps>> = ({
   className,
   dateString,
 }) => {
-  const [dateDisplay, setDateDisplay] = useState("...");
+  const [dateDisplay, setDateDisplay] = useState(
+    dayjs(dateString).format("MMM D, YYYY")
+  );
 
   useEffect(() => {
     setDateDisplay(dayjs(dateString).format("MMM D, YYYY"));
