@@ -1,6 +1,6 @@
 ---
 title: Four Months in the U.S. Part III
-date: "2019-02-22T20:23:00.000+08:00"
+date: "2019-02-22T20:23:00.000-08:00"
 description: Besides study, we exchange students were arranged to take part in many events. They were good ways to get to know a foreign country, its culture and people. Since SLC is not an ordinary city, there was plenty of special stuff to do.
 ---
 
@@ -49,7 +49,7 @@ Real Salt Lake vs New England Revolution. It seemed Americans like soccer no les
 
 ![soccer](/images/soccer-game.jpg)
 
-### Rodeo!
+### Rodeo
 
 It's really hard to understand what a rodeo is before actually seeing it. It is a special in the wild west because it's about horses and cowboys! You can see cowboys (even _**cowgirls**_!) trying their best to do complicated or dangeous actions on the field. You have to stand the heavy smell from horses, though. 😉
 

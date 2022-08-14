@@ -1,6 +1,6 @@
 ---
 title: Four Months in the U.S. Part I
-date: "2019-02-16T14:13:00.000+08:00"
+date: "2019-02-16T14:13:00.000-08:00"
 description: I decided to go on an exchange program in the U.S. last year for a change of mind. Four months in Salt Lake City, a beautiful and quiet place in the state of Utah has really given me something new to feel and think about. Life is completely different and there is much to explore.
 ---
 

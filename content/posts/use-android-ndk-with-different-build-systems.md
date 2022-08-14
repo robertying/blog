@@ -1,6 +1,6 @@
 ---
 title: Use Android NDK with Different Build Systems
-date: "2019-04-03T01:34:00.000+08:00"
+date: "2019-04-03T01:34:00.000-08:00"
 description: I have been working on an Android app with which I wanted to integrate my previously written C library. It uses GNU autotools to generate Makefiles and build from them. Later on, I also needed a library which uses CMake. This post talks about the way I implement the two C library of different build systems with Android NDK to use them in my app.
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Four Months in the U.S. Part II
-date: "2019-02-21T23:14:00.000+08:00"
+date: "2019-02-21T23:14:00.000-08:00"
 description: After settling down in SLC, study became a rather routine part. Courses in the U.S. are certainly different from those in China. From a Chinese student's perspective, students in the University of Utah, or should I say in the States, are somewhat very special.
 ---
 
@@ -40,7 +40,7 @@ Students also tend to solve questions in class, instead of asking questions in p
 
 ## Moments
 
-### Fun!
+### Fun
 
 On one Computer Systems class, there was a demo to use a specific command. But see what happened when all the class were trying to figure out the correct spelling.
 

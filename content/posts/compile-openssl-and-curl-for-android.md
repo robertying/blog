@@ -1,6 +1,6 @@
 ---
 title: Compile openssl and curl for Android
-date: "2019-04-19T01:07:00.000+08:00"
+date: "2019-04-19T01:07:00.000-08:00"
 description: Although Android has already had a lot of helpful utilities for requests, we still need curl where we may integrate some C libraries which use curl. Since we now use SSL everywhere, it is also important to make openssl to work with Android too. Compiling the two popular libraries for Android seems an easy job, but there is not really a tutorial for this or any instruction to look for, hence this article.
 ---
 

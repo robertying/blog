@@ -1,6 +1,6 @@
 ---
 title: Generate Table of Contents for MDX Posts with NextJS
-date: "2021-02-04T17:27:00.000+08:00"
+date: "2021-02-04T17:27:00.000-08:00"
 description: I've rewritten my blog (this blog) several times, the latest of which is built with MDX and NextJS. With frontmatter not being an option, I had to find a MDX-compatible way to generate the table of contents for my posts.
 ---
 
