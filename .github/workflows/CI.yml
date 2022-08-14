@@ -4,9 +4,6 @@ on:
   push:
     branches: [main]
 
-env:
-  TZ: America/Los_Angeles
-
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -48,6 +45,7 @@ jobs:
       USERNAME: ${{ github.actor }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       CONTAINER_NAME: blog
+      TZ: America/Los_Angeles
     steps:
       - uses: actions/checkout@v3
       - name: Login into registry
