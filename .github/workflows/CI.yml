@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+env:
+  TZ: America/Los_Angeles
+
 jobs:
   check:
     runs-on: ubuntu-latest
