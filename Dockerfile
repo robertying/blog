@@ -14,6 +14,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+ENV TZ America/Los_Angeles
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN apk add --no-cache curl && \
