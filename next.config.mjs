@@ -8,10 +8,6 @@ const nextConfig = {
   },
   compress: false,
   output: "standalone",
-  experimental: {
-    runtime: "nodejs",
-    serverComponents: true,
-  },
 };
 
 export default nextConfig;
