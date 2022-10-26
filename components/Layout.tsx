@@ -32,12 +32,10 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({
             <ProfileImage size="large" />
             <div className="text-4xl font-extrabold">{name}</div>
             <div className="flex flex-row items-center space-x-4">
-              <Link href="/about">
-                <a className="text-center">About Me</a>
+              <Link href="/about" className="text-center">
+                About Me
               </Link>
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
+              <Link href="/projects">Projects</Link>
               <a
                 href="https://github.com/robertying"
                 target="_blank"
@@ -52,9 +50,7 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({
         ) : (
           <>
             <Link href="/">
-              <a>
-                <ProfileImage size="small" />
-              </a>
+              <ProfileImage size="small" />
             </Link>
             <div className="text-lg">{name}</div>
           </>
@@ -62,8 +58,8 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({
       </header>
       <main className="mt-8">{children}</main>
       {!home && (
-        <Link href="/">
-          <a className="text-lg font-medium">← Back to home</a>
+        <Link href="/" className="text-lg font-medium">
+          ← Back to home
         </Link>
       )}
       <footer className="text-xs mt-16 flex flex-col space-y-4 items-center">

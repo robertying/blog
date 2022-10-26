@@ -14,8 +14,8 @@ function Home({ posts }: HomeProps) {
       <ul className="flex flex-col space-y-8">
         {posts.map(({ id, date, title, description }) => (
           <li className="flex flex-col space-y-2" key={id}>
-            <Link href={`/posts/${id}`}>
-              <a className="text-lg font-medium">{title}</a>
+            <Link href={`/posts/${id}`} className="text-lg font-medium">
+              {title}
             </Link>
             <p>{description}</p>
             <Date
