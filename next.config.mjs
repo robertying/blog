@@ -5,8 +5,8 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
   },
-  compress: false,
   output: "standalone",
+  compress: true, // FIXME
 };
 
 export default nextConfig;

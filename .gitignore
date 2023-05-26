@@ -33,7 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
-# generated images
-public/images/*.avif
-public/images/*.webp
+next-env.d.ts
