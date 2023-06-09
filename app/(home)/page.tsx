@@ -2,7 +2,6 @@ import Link from "next/link";
 import Date from "components/Date";
 import { getAllPosts } from "lib/post";
 
-/* @ts-expect-error Async Server Component */
 const HomePage: React.FC = async () => {
   const posts = await getAllPosts();
 

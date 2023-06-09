@@ -14,7 +14,6 @@ export async function generateMetadata({
   };
 }
 
-/* @ts-expect-error Async Server Component */
 const OtherPage: React.FC<{ params: { id: string } }> = async ({
   params: { id },
 }) => {
