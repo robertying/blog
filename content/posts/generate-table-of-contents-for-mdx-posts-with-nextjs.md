@@ -139,11 +139,11 @@ const ast = require("@babel/parser").parse(
   fileContents.split("\n\n").find((t) => t.startsWith("export const metadata")),
   {
     sourceType: "module",
-  }
+  },
 );
 
 const metadataAst = ast.program.body[0].declaration.declarations.find(
-  (d) => d.id.name === "metadata"
+  (d) => d.id.name === "metadata",
 );
 
 const properties = metadataAst.init.properties;
@@ -153,7 +153,7 @@ const metadata = properties.reduce(
     ...acc,
     [cur.key.name]: cur.value.value,
   }),
-  {}
+  {},
 );
 ```
 
