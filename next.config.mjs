@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
-  compress: true, // FIXME
+  compress: false,
 };
 
 export default nextConfig;
