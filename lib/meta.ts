@@ -1,3 +1,3 @@
 export const name = "Rui Ying (应睿)";
-export const siteName = "Blog by Rui Ying (应睿)";
-export const siteDescription = "A Software Engineer 💻 🎮 🍿 🥘";
+export const siteName = "前端技术测试";
+export const siteDescription = "前端工程师的小窝 💻 🎮 🍿 🥘";
