@@ -1,5 +1,6 @@
-import "@primer/css/dist/base.css";
+import "@primer/css/dist/primitives.css";
 import "@primer/css/dist/color-modes.css";
+import "@primer/css/dist/base.css";
 import "./globals.css";
 import type { Route } from "next";
 import Link from "next/link";
