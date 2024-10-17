@@ -3,11 +3,13 @@ import Date from "components/Date";
 import { getReactElementFromMarkdown } from "lib/markdown";
 import { getPostById, getPostIds } from "lib/post";
 
-export async function generateMetadata({
-  params: { id },
-}: {
-  params: { id: string };
+export async function generateMetadata(props: {
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
+
+  const { id } = params;
+
   const post = await getPostById(id);
 
   return {
@@ -16,9 +18,13 @@ export async function generateMetadata({
   };
 }
 
-const PostPage: React.FC<{ params: { id: string } }> = async ({
-  params: { id },
-}) => {
+const PostPage: React.FC<{ params: Promise<{ id: string }> }> = async (
+  props,
+) => {
+  const params = await props.params;
+
+  const { id } = params;
+
   const post = await getPostById(id);
   const element = await getReactElementFromMarkdown(post.content);
 

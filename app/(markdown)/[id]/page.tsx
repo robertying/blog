@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { getReactElementFromMarkdown } from "lib/markdown";
 import { getSectionById } from "lib/section";
 
-export async function generateMetadata({
-  params: { id },
-}: {
-  params: { id: string };
+export async function generateMetadata(props: {
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
+
+  const { id } = params;
+
   const post = await getSectionById(id);
 
   return {
@@ -14,9 +16,13 @@ export async function generateMetadata({
   };
 }
 
-const OtherPage: React.FC<{ params: { id: string } }> = async ({
-  params: { id },
-}) => {
+const OtherPage: React.FC<{ params: Promise<{ id: string }> }> = async (
+  props,
+) => {
+  const params = await props.params;
+
+  const { id } = params;
+
   const post = await getSectionById(id);
   const element = await getReactElementFromMarkdown(post.content);
 
