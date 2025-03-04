@@ -6,7 +6,7 @@ import { siteDescription, name } from "lib/meta";
 const HomeLayout: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   return (
     <>
-      <header className="flex flex-col items-center space-y-4">
+      <header className="flex! flex-col items-center space-y-4">
         <ProfileImage size="large" />
         <div className="text-4xl font-extrabold">{name}</div>
         <div className="flex flex-row items-center space-x-4">

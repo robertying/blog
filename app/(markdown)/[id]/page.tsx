@@ -27,7 +27,7 @@ const OtherPage: React.FC<{ params: Promise<{ id: string }> }> = async (
   const element = await getReactElementFromMarkdown(post.content);
 
   return (
-    <article className="flex flex-col">
+    <article className="flex! flex-col">
       <h1 className="text-3xl font-bold">{post.title}</h1>
       <div className="my-6 markdown-body">{element}</div>
     </article>

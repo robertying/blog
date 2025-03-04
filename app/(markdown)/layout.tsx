@@ -8,7 +8,7 @@ import ProfileImage from "components/ProfileImage";
 const PostLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <header className="flex flex-col items-center space-y-4">
+      <header className="flex! flex-col items-center space-y-4">
         <Link href="/">
           <ProfileImage size="small" />
         </Link>

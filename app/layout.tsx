@@ -29,7 +29,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
       >
         <div className="max-w-2xl mx-auto px-6 my-12">
           {children}
-          <footer className="text-xs mt-16 flex flex-col space-y-4 items-center">
+          <footer className="text-xs mt-16 flex! flex-col space-y-4 items-center">
             <Link
               href={
                 "https://creativecommons.org/licenses/by-nc-sa/4.0/" as Route

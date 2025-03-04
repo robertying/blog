@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html,
@@ -8,17 +6,25 @@
     font-size: 18px !important;
   }
 
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
   a {
-    @apply text-blue-600;
+    color: var(--color-blue-600);
   }
 
   a:hover {
-    @apply underline;
+    text-decoration: underline;
   }
 
   @media (prefers-color-scheme: dark) {
     a {
-      @apply text-blue-400;
+      color: var(--color-blue-400);
     }
   }
 }
