@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.8.1+sha512.c50088ba998c67b8ca8c99df8a5e02fd2ae2e2b29aaf238feaa9e124248d3f48f9fb6db2424949ff901cffbb5e0f0cc1ad6aedb602cd29450751d11c35023677",
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -11,23 +11,23 @@
   },
   "dependencies": {
     "@primer/css": "21.5.1",
-    "@tailwindcss/postcss": "4.1.4",
+    "@tailwindcss/postcss": "4.1.7",
     "@types/fs-extra": "11.0.4",
-    "@types/node": "22.14.1",
-    "@types/react": "19.1.2",
-    "@types/react-dom": "19.1.2",
-    "babel-plugin-react-compiler": "19.0.0-beta-ebf51a3-20250411",
+    "@types/node": "22.15.21",
+    "@types/react": "19.1.5",
+    "@types/react-dom": "19.1.5",
+    "babel-plugin-react-compiler": "19.1.0-rc.2",
     "dayjs": "1.11.13",
-    "eslint": "9.25.0",
-    "eslint-config-next": "15.3.1",
-    "eslint-config-prettier": "10.1.2",
-    "eslint-plugin-react-compiler": "19.0.0-beta-ebf51a3-20250411",
+    "eslint": "9.27.0",
+    "eslint-config-next": "15.3.2",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
     "fs-extra": "11.3.0",
     "gray-matter": "4.0.3",
     "highlight.js": "11.11.1",
     "is-absolute-url": "4.0.1",
     "lowlight": "3.3.0",
-    "next": "15.3.1",
+    "next": "15.3.2",
     "postcss": "8.5.3",
     "prettier": "3.5.3",
     "react": "19.1.0",
@@ -39,14 +39,16 @@
     "remark-breaks": "4.0.0",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.2",
-    "sharp": "0.34.1",
-    "tailwindcss": "4.1.4",
+    "sharp": "0.34.2",
+    "tailwindcss": "4.1.7",
     "typescript": "5.8.3",
     "unified": "11.0.5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "sharp"
+      "@tailwindcss/oxide",
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }
