@@ -4,6 +4,7 @@ import "@primer/css/dist/base.css";
 import "./globals.css";
 import type { Route } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteName, siteDescription, name } from "lib/meta";
 
 export const metadata = {
@@ -39,6 +40,22 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
             >
               CC BY-NC-SA 4.0
             </Link>
+            <span>
+              <Image
+                className="inline"
+                src="/mps-beian.png"
+                alt=""
+                width={16}
+                height={16}
+              />{" "}
+              <Link
+                href="https://beian.mps.gov.cn/#/query/webSearch?code=33021202003727"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                浙公网安备33021202003727号
+              </Link>
+            </span>
             <Link
               href={"https://beian.miit.gov.cn/" as Route}
               target="_blank"
