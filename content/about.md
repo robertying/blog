@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-My name is **应睿 (Ying Rui)**. I like to be called **Robert** as well. I was an undergraduate student of Electronic Engineering at [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm). Now I'm beginning the journey as a Computer Science Master's student at Stanford University. I'm always enthusiastic about computer stuff and keen on software engineering, especially front-end development.
+My name is **Rui**. I like to be called **Robert** as well. I was an undergraduate student of Electronic Engineering at [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm). Now I'm beginning the journey as a Computer Science Master's student at Stanford University. I'm always enthusiastic about computer stuff and keen on software engineering, especially front-end development.
 
 ## Interests
 
