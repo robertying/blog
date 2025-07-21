@@ -45,6 +45,10 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
                 className="inline"
                 src="/mps-beian.png"
                 alt=""
+                style={{
+                  width: "1rem",
+                  height: "auto",
+                }}
                 width={16}
                 height={16}
               />{" "}
