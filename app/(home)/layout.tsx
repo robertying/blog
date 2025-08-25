@@ -3,7 +3,7 @@ import Link from "next/link";
 import ProfileImage from "components/ProfileImage";
 import { siteDescription, name } from "lib/meta";
 
-const HomeLayout: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+const HomeLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
       <header className="flex! flex-col items-center space-y-4">

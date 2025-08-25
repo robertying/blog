@@ -16,12 +16,12 @@ import isAbsoluteUrl from "is-absolute-url";
 const production = { Fragment: prod.Fragment, jsx: prod.jsx, jsxs: prod.jsxs };
 
 const components = {
-  img: (props) => <Image {...(props as any)} alt={props.alt!} />,
+  img: (props) => <Image {...props} alt={props.alt!} />,
   a: (props) =>
     props.href && isAbsoluteUrl(props.href) ? (
-      <Link {...(props as any)} target="_blank" rel="noopener noreferrer" />
+      <Link {...props} target="_blank" rel="noopener noreferrer" />
     ) : (
-      <Link {...(props as any)} />
+      <Link {...props} />
     ),
 } as Components;
 
@@ -36,7 +36,7 @@ export const getReactElementFromMarkdown = async (md: string) => {
     .use(react, {
       ...production,
       components,
-    } as any)
+    })
     .process(md);
 
   return file.result;
