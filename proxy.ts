@@ -5,7 +5,7 @@ const redirects: Record<string, string> = {
   "/resume": "https://dl.ruiying.io/Resume_Rui_Ying.pdf",
 };
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const url = req.nextUrl.pathname;
 
   if (redirects[url]) {

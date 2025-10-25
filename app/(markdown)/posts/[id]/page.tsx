@@ -49,5 +49,4 @@ export async function generateStaticParams() {
   return postIds.map((id) => ({ id }));
 }
 
-const dynamicParams = false;
-export { dynamicParams };
+export const dynamicParams = false;

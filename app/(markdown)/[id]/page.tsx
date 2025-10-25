@@ -40,5 +40,4 @@ export async function generateStaticParams() {
   return [{ id: "about" }, { id: "projects" }];
 }
 
-const dynamicParams = false;
-export { dynamicParams };
+export const dynamicParams = false;
