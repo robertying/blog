@@ -3,6 +3,8 @@ name: CI
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   check:
@@ -38,6 +40,7 @@ jobs:
 
   deploy:
     needs: [check]
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     env:
       USERNAME: ${{ github.actor }}
