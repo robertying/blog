@@ -4,3 +4,7 @@ node_modules
 .next
 Dockerfile
 .dockerignore
+.claude
+.env*
+**/.DS_Store
+*.tsbuildinfo

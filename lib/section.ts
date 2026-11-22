@@ -13,8 +13,8 @@ export interface SectionData {
 export async function getSectionIds() {
   const fileNames = await fs.readdir(contentDirectory, { withFileTypes: true });
   return fileNames
-    .filter((f) => f.isFile())
-    .map((file) => file.name.replace(/\.md?$/, ""));
+    .filter((f) => f.isFile() && f.name.endsWith(".md"))
+    .map((file) => file.name.slice(0, -".md".length));
 }
 
 export async function getSectionById(id: string) {

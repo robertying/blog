@@ -1,6 +1,5 @@
 allowBuilds:
   sharp: true
   unrs-resolver: true
-onlyBuiltDependencies:
-  - sharp
-minimumReleaseAge: 0
+# minimumReleaseAge is left at pnpm's default (skip versions under a day old);
+# setting it to 0 turns that protection off.

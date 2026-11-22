@@ -4,7 +4,6 @@ import markdown from "remark-parse";
 import breaks from "remark-breaks";
 import remark2rehype from "remark-rehype";
 import slug from "rehype-slug";
-import imgSize from "rehype-img-size";
 import highlight from "rehype-highlight";
 import { common } from "lowlight";
 import groovy from "highlight.js/lib/languages/groovy";
@@ -12,6 +11,7 @@ import react, { Components } from "rehype-react";
 import Image from "next/image";
 import Link from "next/link";
 import isAbsoluteUrl from "is-absolute-url";
+import imageSize from "lib/rehype-image-size";
 
 const production = { Fragment: prod.Fragment, jsx: prod.jsx, jsxs: prod.jsxs };
 
@@ -31,7 +31,7 @@ export const getReactElementFromMarkdown = async (md: string) => {
     .use(breaks)
     .use(remark2rehype, { allowDangerousHtml: false })
     .use(slug)
-    .use(imgSize, { dir: "public" })
+    .use(imageSize, { dir: "public" })
     .use(highlight, { detect: true, languages: { ...common, groovy } })
     .use(react, {
       ...production,
