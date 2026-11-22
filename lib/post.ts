@@ -16,8 +16,8 @@ export interface PostData {
 export async function getPostIds() {
   const fileNames = await fs.readdir(postDirectory, { withFileTypes: true });
   return fileNames
-    .filter((f) => f.isFile())
-    .map((file) => file.name.replace(/\.md?$/, ""));
+    .filter((f) => f.isFile() && f.name.endsWith(".md"))
+    .map((file) => file.name.slice(0, -".md".length));
 }
 
 export async function getPostById(id: string) {
